@@ -1,0 +1,7 @@
+const types = {
+    LOAD_DATA_SUCCESS: 'LOAD_DATA_SUCCESS',
+    LOAD_DATA_FAILURE: 'LOAD_DATA_FAILURE',
+    LOAD_DATA_REQUEST: 'LOAD_DATA_REQUEST'
+}
+
+export default types
