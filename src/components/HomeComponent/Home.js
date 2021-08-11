@@ -13,7 +13,7 @@ const Home = (props) => {
                <a href='/search' className='searchLink'>Search Quotes</a>
                 <button className='btn' onClick={props.logout_func}>Logout</button>
             </nav>
-            <br />
+            <br/><br/>
             <div className='QuoteGenerator'>
                 <div className='quote'>
                     <h2>{ props.quote.content ? props.quote.content : '' }</h2>
