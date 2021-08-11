@@ -1,7 +1,7 @@
 import types from './../types';
 import axios from 'axios';
 
-export const serverGetQuotes = () => {
+export const serverGetTagQuotes = (tags) => {
     return (dispatch) => {
 
         const headers = {
@@ -10,7 +10,7 @@ export const serverGetQuotes = () => {
 
         axios({
             headers,
-            url: 'https://api.quotable.io/random',
+            url: 'https://api.quotable.io/quotes?tags=' + tags,
             method: 'get'
         }).then((response) => {
 

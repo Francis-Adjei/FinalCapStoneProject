@@ -47,16 +47,18 @@ class LoginContainer extends Component {
 
     handleChange = (data) => {
         this.setState(prevState => ({
-            correspondence_details: {                   // object that we want to update
-                ...prevState,    // keep all other key-value pairs
-                [data.field]: data.value     // update the value of specific key
-            }
+            ...prevState,    // keep all other key-value pairs
+            [data.field]: data.value     // update the value of specific key
         }));
     }
 
     render() {
         return (
-            <Login {...this.state} handleChange={(event) => this.handleChange(event.target.value)} login_func={this.doLogin} />
+            <Login
+                {...this.state}
+                handleChange={this.handleChange}
+                login_func={this.doLogin}
+            />
         )
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = (props) => {
+const Search = (props) => {
 
     return (
         <section className='hero'>
@@ -10,9 +10,13 @@ const Home = (props) => {
                     <h2>QUOTABLE</h2>
                     <p>Search and store your favorite quotes.</p>
                 </div>
-               <a href='/search' className='searchLink'>Search Quotes</a>
+               <a href='/home' className='searchLink'>Home</a>
                 <button className='btn' onClick={props.logout_func}>Logout</button>
             </nav>
+            <br />
+            <div className="search__container">
+               <input className="search__input" type="text" placeholder="Search" onChange={(event) => props.handleChange({"field": "search", "value": event.target.value})} />
+            </div>
             <br />
             <div className='QuoteGenerator'>
                 <div className='quote'>
@@ -35,4 +39,4 @@ const Home = (props) => {
     )
 }
 
-export default Home;
+export default Search;

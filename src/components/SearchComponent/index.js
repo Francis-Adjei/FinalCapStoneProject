@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import Home from './Home';
+import Search from './Search';
 import { connect } from 'react-redux'
-import { serverGetQuotes } from './../../actions/HomeAction';
+import { serverGetTagQuotes } from './../../actions/SearchAction';
 
-class HomeContainer extends Component {
+class SearchContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            search: ''
         }
 
         this.clickBtn = this.clickBtn.bind(this);
@@ -24,15 +25,14 @@ class HomeContainer extends Component {
     }
 
     clickBtn = () => {
-        this.props.serverGetQuotes();
+        console.log(this.state.search);
+        this.props.serverGetTagQuotes(this.state.search);
     }
 
     handleChange = (data) => {
         this.setState(prevState => ({
-            correspondence_details: {                   // object that we want to update
-                ...prevState,    // keep all other key-value pairs
-                [data.field]: data.value     // update the value of specific key
-            }
+            ...prevState,    // keep all other key-value pairs
+            [data.field]: data.value     // update the value of specific key
         }));
     }
 
@@ -43,12 +43,13 @@ class HomeContainer extends Component {
 
     render() {
         return (
-            <Home 
-            {...this.state} 
-            handleChange={(event) => this.handleChange(event.target.value)} 
-            clickBtn={this.clickBtn} 
-            quote={this.props.home.data}
-            logout_func={this.doLogout}
+            <Search
+                {...this.state}
+                handleChange={(event) => this.handleChange(event.target.value)}
+                clickBtn={this.clickBtn}
+                quote={this.props.home.data}
+                logout_func={this.doLogout}
+                handleChange={this.handleChange}
             />
         )
     }
@@ -61,4 +62,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { serverGetQuotes })(HomeContainer)
+export default connect(mapStateToProps, { serverGetTagQuotes })(SearchContainer)
