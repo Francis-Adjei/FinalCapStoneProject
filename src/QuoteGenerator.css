@@ -19,13 +19,33 @@
 
 /* end header css */
 
+
+.searchLink{
+    display: block;
+    border: 2px solid #008cba;
+    margin-left: 980px;
+    background: #fff;
+    padding: 10px 15px;
+    color: #008cba;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background 1s, color 1s;
+    text-decoration: none;
+}
+
+.searchLink:hover{
+    background: #008cba;
+    color: #fff;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 .hero{
     width: 100%;
     min-height: 100vh;
     background: url(./assets/pexels-photo-48694.jpeg) no-repeat center center fixed;
-    background-size: cover;
- 
-    
+    background-size: cover;  
 }
 
 .hero nav{

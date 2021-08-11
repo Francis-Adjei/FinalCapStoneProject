@@ -10,10 +10,10 @@ const Home = (props) => {
                     <h2>QUOTABLE</h2>
                     <p>Search and store your favorite quotes.</p>
                 </div>
-                <Link to='/search'>Search Quotes</Link>
+               <a href='/search' className='searchLink'>Search Quotes</a>
                 <button className='btn'>Logout</button>
             </nav>
-            <br /><br />
+            <br />
             <div className='QuoteGenerator'>
                 <div className='quote'>
                     <h2>{ props.quote.content ? props.quote.content : '' }</h2>
