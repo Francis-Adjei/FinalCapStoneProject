@@ -7,11 +7,14 @@ class SearchContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            search: ''
+            search: 'technology',
+            current_quote: '',
+            current_count: 0
         }
 
         this.clickBtn = this.clickBtn.bind(this);
         this.doLogout = this.doLogout.bind(this);
+        this.nextQuote = this.nextQuote.bind(this);
     }
 
     componentDidMount() {
@@ -20,7 +23,15 @@ class SearchContainer extends Component {
 
     componentDidUpdate(prevProps, prevState) {
         if (prevProps.home !== this.props.home) {
-            console.log(this.props.home);
+            // console.log(this.props.home);
+
+            if (this.props.home.data.count > 0) {
+                this.setState({
+                    current_quote: this.props.home.data.results[0], 
+                    current_count: 0
+                });
+                // console.log(this.props.data);
+            }
         }
     }
 
@@ -41,6 +52,14 @@ class SearchContainer extends Component {
         this.props.history.push("/");
     }
 
+    nextQuote = () => {
+        let counter = this.state.current_count;
+        let new_count = counter + 1;
+        if (new_count <  this.props.home.data.results.length) {
+            this.setState({current_quote:  this.props.home.data.results[new_count], current_count: new_count});
+        }
+    }
+
     render() {
         return (
             <Search
@@ -50,6 +69,7 @@ class SearchContainer extends Component {
                 quote={this.props.home.data}
                 logout_func={this.doLogout}
                 handleChange={this.handleChange}
+                next_quote={this.nextQuote}
             />
         )
     }

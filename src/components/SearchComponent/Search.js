@@ -16,13 +16,14 @@ const Search = (props) => {
             <br />
             <div className="search__container">
                <input className="search__input" type="text" placeholder="Search" onChange={(event) => props.handleChange({"field": "search", "value": event.target.value})} />
+               <button className='btn' onClick={props.clickBtn}>Search</button>
             </div>
             <div className='QuoteGenerator'>
                 <div className='quote'>
-                    <h2>{ props.quote.content ? props.quote.content : '' }</h2>
-                    <small>-{ props.quote.author ? props.quote.author : '' }-</small>
+                    <h2>{ props.current_quote.content ? props.current_quote.content : '' }</h2>
+                    <small>-{ props.current_quote.author ? props.current_quote.author : '' }-</small>
                 </div><br />
-                <button className='btn' onClick={props.clickBtn}>Next Quote</button>
+                <button className='btn' onClick={props.next_quote}>Next Quote</button>
             </div>
             <div id="footer">
                 <footer>

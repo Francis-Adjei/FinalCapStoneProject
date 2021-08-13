@@ -11,7 +11,7 @@ const Login = (props) => {
                         <h2 className="title">Sign in</h2>
                         <div className="input-field">
                             <i className="fas fa-user"></i>
-                            <input type="text" placeholder="Username" onChange={(event) => props.handleChange({"field": "email", "value": event.target.value})} />
+                            <input type="text" placeholder="Email" onChange={(event) => props.handleChange({"field": "email", "value": event.target.value})} />
                         </div>
                         <div class="input-field">
                             <i className="fas fa-lock"></i>
