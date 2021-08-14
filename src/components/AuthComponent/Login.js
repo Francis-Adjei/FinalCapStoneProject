@@ -11,14 +11,14 @@ const Login = (props) => {
                         <h2 className="title">Sign in</h2>
                         <div className="input-field">
                             <i className="fas fa-user"></i>
-                            <input type="text" placeholder="Email" onChange={(event) => props.handleChange({"field": "email", "value": event.target.value})} />
+                            <input type="text" placeholder="Username" onChange={(event) => props.handleChange({"field": "email", "value": event.target.value})} />
                         </div>
                         <div class="input-field">
                             <i className="fas fa-lock"></i>
                             <input type="password" placeholder="Password" onChange={(event) => props.handleChange({"field": "password", "value": event.target.value})} />
                         </div>
                         <p className="social-text">
-                            <Link to='/forget-password'>forgot password</Link>
+                            <Link to='/forget-password'>forgot password?</Link>
                         </p>
                         <button onClick={props.login_func} class="btnLogin solid">Login</button>
                         <div className="social-media">

@@ -10,7 +10,7 @@ const Home = (props) => {
                     <h2>QUOTABLE</h2>
                     <p>Search and store your favorite quotes.</p>
                 </div>
-               <a href='/search' className='searchLink'>Search Quotes</a>
+               <a href='/search' className='searchLink'>Search</a>
                 <button className='btn' onClick={props.logout_func}>Logout</button>
             </nav>
             <br/><br/><br/>
@@ -20,15 +20,11 @@ const Home = (props) => {
                     <small>-{ props.quote.author ? props.quote.author : '' }-</small>
                 </div><br />
                 <button className='btn' onClick={props.clickBtn}>Generate New Quote</button>
-            </div>
+            </div><br/>
             <div id="footer">
                 <footer>
                     <h3>QUOTABLE</h3>
                     <p>Created by Francis Adjei</p>
-                    <span>
-                        <a href="https://github.com/Francis-Adjei/FinalCapStoneProject"><i className="fa fa-github" aria-hidden="true"></i></a>
-                        <a href="https://www.linkedin.com/in/adjei-francis-91a40016b/"><i className="fa fa-linkedin" aria-hidden="true"></i></a>
-                    </span>
                 </footer>
             </div>
         </section>
