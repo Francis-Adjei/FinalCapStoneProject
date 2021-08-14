@@ -24,7 +24,7 @@ const Search = (props) => {
                     <small>-{ props.current_quote.author ? props.current_quote.author : '' }-</small>
                 </div><br />
                 <button className='btn' onClick={props.next_quote}>Next Quote</button>
-            </div>
+            </div><br/>
             <div id="footer">
                 <footer>
                     <h3>QUOTABLE</h3>
