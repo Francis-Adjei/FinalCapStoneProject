@@ -38,8 +38,10 @@ const ForgetPassword = (props) => {
                                 <input type="password" className="input" placeholder="Repeat Password" onChange={(event) => props.handleChange({"field": "password2", "value": event.target.value})} />
                             </div>
                         </div>
-                        {/* <input type="submit" className="btn" value="Login" /> */}
-                        <button type="button" className="btnLogin" onClick={props.reset_func}>RESET</button>
+                        <button type="button" className="btn" onClick={props.reset_func}>RESET</button>
+                        <p>
+                            <Link to="/"><i class="fas fa-chevron-circle-left"> Login</i></Link>
+                        </p>
                     </form>
                 </div>
             </div>

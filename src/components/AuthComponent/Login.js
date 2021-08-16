@@ -29,9 +29,9 @@ const Login = (props) => {
                             </div>
                         </div>
                         <Link to='/forget-password'>forgot password?</Link>
-                        <button  onClick={props.login_func} className="btnLogin">LOGIN</button>
+                        <button  onClick={props.login_func} className="btn">LOGIN</button>
                         <p>Don't have an account
-                            <Link to="/sign-up">Sign up</Link>
+                            <Link to="/sign-up"><i class="fas fa-chevron-circle-right"> Sign up</i></Link>
                         </p>
                     </form>
                 </div>

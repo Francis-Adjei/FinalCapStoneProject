@@ -38,7 +38,10 @@ const Signup = (props) => {
                             </div>
                         </div>
                       
-                        <button onClick={props.signup_func} className="btnLogin">SIGN UP</button>
+                        <button onClick={props.signup_func} className="btn">SIGN UP</button>
+                        <p>Already have an account
+                            <Link to="/"><i class="fas fa-chevron-circle-left"> Login</i></Link>
+                        </p>
                     </form>
                 </div>
             </div>
