@@ -27,7 +27,7 @@ class SearchContainer extends Component {
 
             if (this.props.home.data.count > 0) {
                 this.setState({
-                    current_quote: this.props.home.data.results[0], 
+                    current_quote: this.props.home.data.results[0],
                     current_count: 0
                 });
                 // console.log(this.props.data);
@@ -53,10 +53,12 @@ class SearchContainer extends Component {
     }
 
     nextQuote = () => {
-        let counter = this.state.current_count;
-        let new_count = counter + 1;
-        if (new_count <  this.props.home.data.results.length) {
-            this.setState({current_quote:  this.props.home.data.results[new_count], current_count: new_count});
+        if (this.props.home.data.results) {
+            let counter = this.state.current_count;
+            let new_count = counter + 1;
+            if (new_count < this.props.home.data.results.length) {
+                this.setState({ current_quote: this.props.home.data.results[new_count], current_count: new_count });
+            }
         }
     }
 

@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
-import Login from './Login'
+import Signup from './Signup'
 import { connect } from 'react-redux'
 import { serverLogin } from './../../actions/AuthAction';
 
-class LoginContainer extends Component {
+class SignupContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password: '',
+            username: ''
         }
 
-        this.doLogin = this.doLogin.bind(this);
+        this.doSignUp = this.doSignUp.bind(this);
         this.handleChange = this.handleChange.bind(this)
     }
 
@@ -23,31 +24,23 @@ class LoginContainer extends Component {
 
     }
 
-    doLogin = () => {
+    doSignUp = () => {
         let obj = {
             password: this.state.password,
-            email: this.state.email
+            email: this.state.email,
+            username: this.state.username
         }
 
-        if (!window.localStorage.getItem('user')) {
-            alert("Wrong email or password");
+        console.log(obj);
 
-            return;
-        }
-
-        let existing_user = JSON.parse(window.localStorage.getItem('user'));
-
-        if (this.state.email === existing_user.email && this.state.password === existing_user.password) {
+        if (this.state.username === '' || this.state.email === '' || this.state.password === '') {
+            alert("All fields are required");
+        }else{
             window.localStorage.setItem('user', JSON.stringify(obj));
-            this.props.serverLogin(obj)
-            this.props.history.push("/home");
-            return;
-
-        } else {
-
-            alert("Wrong email and password");
-            return;
+            alert("Account created successfully");
         }
+
+        return;
     }
 
     handleChange = (data) => {
@@ -59,10 +52,10 @@ class LoginContainer extends Component {
 
     render() {
         return (
-            <Login
+            <Signup
                 {...this.state}
                 handleChange={this.handleChange}
-                login_func={this.doLogin}
+                signup_func={this.doSignUp}
             />
         )
     }
@@ -74,4 +67,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { serverLogin })(LoginContainer)
+export default connect(mapStateToProps, { serverLogin })(SignupContainer)

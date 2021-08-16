@@ -1,17 +1,18 @@
 import React, { Component } from 'react'
-import Login from './Login'
+import ForgetPassword from './ForgetPassword'
 import { connect } from 'react-redux'
 import { serverLogin } from './../../actions/AuthAction';
 
-class LoginContainer extends Component {
+class ForgetPasswordContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
             email: '',
-            password: ''
+            password1: '', 
+            password2: ''
         }
 
-        this.doLogin = this.doLogin.bind(this);
+        this.doReset = this.doReset.bind(this);
         this.handleChange = this.handleChange.bind(this)
     }
 
@@ -23,31 +24,30 @@ class LoginContainer extends Component {
 
     }
 
-    doLogin = () => {
+    doReset = () => {
         let obj = {
-            password: this.state.password,
+            password1: this.state.password1,
+            password2: this.state.password2,
             email: this.state.email
         }
 
-        if (!window.localStorage.getItem('user')) {
-            alert("Wrong email or password");
-
+        if (this.state.password1 !== this.state.password2) {
+            alert("Passwords must match");
             return;
         }
 
-        let existing_user = JSON.parse(window.localStorage.getItem('user'));
+        if (window.localStorage.getItem('user')) {
+            let existing_user = JSON.parse(window.localStorage.getItem('user'));
 
-        if (this.state.email === existing_user.email && this.state.password === existing_user.password) {
-            window.localStorage.setItem('user', JSON.stringify(obj));
-            this.props.serverLogin(obj)
-            this.props.history.push("/home");
-            return;
+            existing_user['password'] = this.state.password1;
 
-        } else {
-
-            alert("Wrong email and password");
-            return;
+        }else{
+            window.localStorage.setItem('user', JSON.stringify({'email': this.state.email, 'password': this.state.password1}));
         }
+
+        alert("Password reset successfully");
+
+        return;
     }
 
     handleChange = (data) => {
@@ -59,10 +59,10 @@ class LoginContainer extends Component {
 
     render() {
         return (
-            <Login
+            <ForgetPassword
                 {...this.state}
                 handleChange={this.handleChange}
-                login_func={this.doLogin}
+                reset_func={this.doReset}
             />
         )
     }
@@ -74,4 +74,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, { serverLogin })(LoginContainer)
+export default connect(mapStateToProps, { serverLogin })(ForgetPasswordContainer)
