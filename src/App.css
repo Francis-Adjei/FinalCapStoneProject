@@ -148,9 +148,15 @@ body, input{
     transform: translateX(30%);
 }
 
+.container .forms-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
 .container .forms-container .signin-signup form{
-    margin-top: 250px;
-    margin-left: 600px;
+    margin: auto 200vw;
     text-align: -webkit-center;
     
 }

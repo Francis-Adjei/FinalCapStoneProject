@@ -36,7 +36,7 @@ class SearchContainer extends Component {
     }
 
     clickBtn = () => {
-        console.log(this.state.search);
+        // console.log(this.state.search);
         this.props.serverGetTagQuotes(this.state.search);
     }
 

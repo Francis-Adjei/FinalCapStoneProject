@@ -1,225 +1,195 @@
-.hero{
-    width: 100%;
-    min-height: 100vh;
-    background: url(./assets/pexels-photo-48694.jpeg) no-repeat center center fixed;
-    background-size: cover;
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: url(./assets/pexels-photo-48694.jpeg) no-repeat center center fixed;
+  background-size: cover;
 }
-
-.hero nav{
-    background: rgba(0, 0, 0, 0.5); 
-    width: 100%;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
+.hero nav {
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .hero nav #header {
-    color: #fff;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 30px;
-    font-weight: 300;
+  color: #fff;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  font-weight: 300;
 }
 .hero nav #header h2 {
-    margin-bottom: 0;
-    letter-spacing: 23px;
+  margin-bottom: 0;
+  letter-spacing: 23px;
 }
 .hero nav #header p {
-    margin-top: 0;
+  margin-top: 0;
 }
-
-.hero nav .searchLink{
-    display: block;
-    border: 2px solid #008cba;
-    margin-left: 980px;
-    background: #fff;
-    padding: 10px 15px;
-    color: #008cba;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    transition: background 1s, color 1s;
-    text-decoration: none;
+.hero nav .searchLink {
+  display: block;
+  border: 2px solid #008cba;
+  margin-left: 980px;
+  background: #fff;
+  padding: 10px 15px;
+  color: #008cba;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background 1s, color 1s;
+  text-decoration: none;
 }
-
-.hero nav .searchLink:hover{
-    background: #008cba;
-    color: #fff;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.hero nav .searchLink:hover {
+  background: #008cba;
+  color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.hero nav .btn{
-    display: block;
-    border: 2px solid #008cba;
-    background: #fff;
-    padding: 10px 15px;
-    color: #008cba;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    transition: background 1s, color 1s;
+.hero nav .btn {
+  display: block;
+  border: 2px solid #008cba;
+  background: #fff;
+  padding: 10px 15px;
+  color: #008cba;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background 1s, color 1s;
 }
-
-.hero nav .btn:hover{
-    background: #008cba;
-    color: #fff;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.hero nav .btn:hover {
+  background: #008cba;
+  color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 .hero .search__container {
-	 width: 430px;
-	 margin: 0 auto;
-	 font-family: 'Raleway', sans-serif;
+  width: 430px;
+  margin: 0 auto;
+  font-family: "Raleway", sans-serif;
 }
-
 .hero .search__container .search__input {
-	 width: 100%;
-	 padding: 12px 24px;
-	 background-color: transparent;
-	 transition: transform 250ms ease-in-out;
-	 font-size: 14px;
-	 line-height: 18px;
-	 color: #fff;
-	 background-color: transparent;
-	 background-repeat: no-repeat;
-	 background-size: 18px 18px;
-	 background-position: 95% center;
-	 border-radius: 50px;
-	 border: 2px solid #fff;
-	 transition: all 250ms ease-in-out;
-	 backface-visibility: hidden;
-	 transform-style: preserve-3d;
+  width: 100%;
+  padding: 12px 24px;
+  background-color: transparent;
+  transition: transform 250ms ease-in-out;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 95% center;
+  border-radius: 50px;
+  border: 2px solid #fff;
+  transition: all 250ms ease-in-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
-
 .hero .search__container .search__input::placeholder {
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
-.hero .search__container .search__input:hover,
-.hero .search__container .search__input:focus {
-   padding: 12px 0;
-   outline: 0;
-   border: 1px solid transparent;
-   border-bottom: 2px solid #fff;
-   border-radius: 0;
-   background-position: 100% center;
+.hero .search__container .btn {
+  border: 2px solid #008cba;
+  background: #fff;
+  padding: 10px 15px;
+  color: #008cba;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background 1s, color 1s;
+  margin-top: 10px;
 }
-
-.hero .search__container .btn{
-    /* display: block; */
-    border: 2px solid #008cba;
-    background: #fff;
-    padding: 10px 15px;
-    color: #008cba;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    transition: background 1s, color 1s;
-    margin-top: 10px;
-   
+.hero .search__container .btn:hover {
+  background: #008cba;
+  color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.hero .search__container .btn:hover{
-    background: #008cba;
-    color: #fff;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+.hero .QuoteGenerator {
+  display: flex;
+  justify-content: center;
+  min-height: 60vh;
+  align-items: center;
+  flex-direction: column;
 }
- 
- 
-.hero .QuoteGenerator{
-    display: flex;
-    justify-content: center;
-    min-height: 60vh; 
-    align-items: center;
-    flex-direction: column;
+.hero .QuoteGenerator .quote {
+  background-image: url(./assets/yellowPerfect.PNG);
+  background-size: cover;
+  width: 650px;
+  height: 450px;
+  border-radius: 10px;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.hero .QuoteGenerator .quote{
-    background-image: url(./assets/yellowPerfect.PNG);
-    background-size: cover; 
-    width: 650px;
-    height: 450px;
-    border-radius: 10px;
-    padding: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.hero .QuoteGenerator .quote h2 {
+  font-size: 2em;
+  font-family: "Special Elite", cursive;
 }
-
-.hero .QuoteGenerator .quote h2{
-    font-size: 2em;
-    font-family: 'Special Elite', cursive;
+.hero .QuoteGenerator .quote small {
+  font-size: 1.5em;
+  font-family: "Dancing Script", cursive;
+  padding-top: 10px;
 }
-
-.hero .QuoteGenerator .quote small{
-    font-size: 1.5em;
-    font-family: 'Dancing Script', cursive;
-    padding-top: 10px;
+.hero .QuoteGenerator .btn {
+  display: block;
+  border: 2px solid #008cba;
+  background: #fff;
+  padding: 10px 15px;
+  color: #008cba;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background 1s, color 1s;
 }
-
-.hero .QuoteGenerator .btn{
-    display: block;
-    border: 2px solid #008cba;
-    background: #fff;
-    padding: 10px 15px;
-    color: #008cba;
-    font-size: 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    transition: background 1s, color 1s;
+.hero .QuoteGenerator .btn:hover {
+  background: #008cba;
+  color: #fff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.hero .QuoteGenerator .btn:hover{
-    background: #008cba;
-    color: #fff;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-
-
-/* footer css */
-
 .hero #footer {
-    background: rgba(0, 0, 0, 0.5); 
-    padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
 }
-
 .hero #footer footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    font-weight: 300;
-    margin-bottom: 1em;
-    color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 300;
+  margin-bottom: 1em;
+  color: #fff;
 }
-
 .hero #footer footer h3 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
-
 .hero #footer footer p {
-    margin: 0;
+  margin: 0;
 }
-
 .hero #footer footer a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
 }
 .hero #footer footer a:hover {
-    color: #d6d1c9;
-    cursor: pointer;
+  color: #d6d1c9;
+  cursor: pointer;
 }
 
+.hero .search__container .search__input:hover,
+.hero .search__container .search__input:focus {
+  padding: 12px 0;
+  outline: 0;
+  border: 1px solid transparent;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+  background-position: 100% center;
+}
 
-
-
-
- 
+/*# sourceMappingURL=QuoteGenerator.css.map */

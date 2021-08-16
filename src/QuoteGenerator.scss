@@ -1,0 +1,192 @@
+.hero {
+	width: 100%;
+	min-height: 100vh;
+	background: url(./assets/pexels-photo-48694.jpeg) no-repeat center center fixed;
+	background-size: cover;
+	nav {
+		background: rgba(0, 0, 0, 0.5);
+		width: 100%;
+		padding: 20px 40px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		#header {
+			color: #fff;
+			height: 100px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-left: 30px;
+			font-weight: 300;
+			h2 {
+				margin-bottom: 0;
+				letter-spacing: 23px;
+			}
+			p {
+				margin-top: 0;
+			}
+		}
+		.searchLink {
+			display: block;
+			border: 2px solid #008cba;
+			margin-left: 980px;
+			background: #fff;
+			padding: 10px 15px;
+			color: #008cba;
+			font-size: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: none;
+			transition: background 1s, color 1s;
+			text-decoration: none;
+			&:hover {
+				background: #008cba;
+				color: #fff;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+		}
+		.btn {
+			display: block;
+			border: 2px solid #008cba;
+			background: #fff;
+			padding: 10px 15px;
+			color: #008cba;
+			font-size: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: none;
+			transition: background 1s, color 1s;
+			&:hover {
+				background: #008cba;
+				color: #fff;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+		}
+	}
+	.search__container {
+		width: 430px;
+		margin: 0 auto;
+		font-family: 'Raleway', sans-serif;
+		.search__input {
+			width: 100%;
+			padding: 12px 24px;
+			background-color: transparent;
+			transition: transform 250ms ease-in-out;
+			font-size: 14px;
+			line-height: 18px;
+			color: #fff;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-size: 18px 18px;
+			background-position: 95% center;
+			border-radius: 50px;
+			border: 2px solid #fff;
+			transition: all 250ms ease-in-out;
+			backface-visibility: hidden;
+			transform-style: preserve-3d;
+			&::placeholder {
+				color: #fff;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+			}
+		}
+		.btn {
+			border: 2px solid #008cba;
+			background: #fff;
+			padding: 10px 15px;
+			color: #008cba;
+			font-size: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: none;
+			transition: background 1s, color 1s;
+			margin-top: 10px;
+			&:hover {
+				background: #008cba;
+				color: #fff;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+		}
+	}
+	.QuoteGenerator {
+		display: flex;
+		justify-content: center;
+		min-height: 60vh;
+		align-items: center;
+		flex-direction: column;
+		.quote {
+			background-image: url(./assets/yellowPerfect.PNG);
+			background-size: cover;
+			width: 650px;
+			height: 450px;
+			border-radius: 10px;
+			padding: 70px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			h2 {
+				font-size: 2em;
+				font-family: 'Special Elite', cursive;
+			}
+			small {
+				font-size: 1.5em;
+				font-family: 'Dancing Script', cursive;
+				padding-top: 10px;
+			}
+		}
+		.btn {
+			display: block;
+			border: 2px solid #008cba;
+			background: #fff;
+			padding: 10px 15px;
+			color: #008cba;
+			font-size: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			outline: none;
+			transition: background 1s, color 1s;
+			&:hover {
+				background: #008cba;
+				color: #fff;
+				box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+			}
+		}
+	}
+	#footer {
+		background: rgba(0, 0, 0, 0.5);
+		padding: 20px;
+		footer {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			font-weight: 300;
+			margin-bottom: 1em;
+			color: #fff;
+			h3 {
+				margin-bottom: 0;
+			}
+			p {
+				margin: 0;
+			}
+			a {
+				color: white;
+				text-decoration: none;
+				font-size: 1.5em;
+				&:hover {
+					color: #d6d1c9;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+.hero .search__container .search__input:hover,
+.hero .search__container .search__input:focus {
+	padding: 12px 0;
+	outline: 0;
+	border: 1px solid transparent;
+	border-bottom: 2px solid #fff;
+	border-radius: 0;
+	background-position: 100% center;
+}
