@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ForgetPassword from './ForgetPassword'
+import ForgetPassword from '../ForgetPasswordComponent'
 import { connect } from 'react-redux'
 import { serverLogin } from './../../actions/AuthAction';
 
