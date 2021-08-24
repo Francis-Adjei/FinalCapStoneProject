@@ -7,7 +7,7 @@ class SearchContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            search: 'technology',
+            search: '',
             current_quote: '',
             current_count: 0
         }
