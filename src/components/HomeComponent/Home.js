@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 
 const Home = (props) => {
 
@@ -10,7 +10,7 @@ const Home = (props) => {
                     <h2>QUOTABLE</h2>
                     <p>Search and store your favorite quotes.</p>
                 </div>
-               <a href='/search' className='searchLink'>Search</a>
+               <Link to='/search' className='searchLink'>Search</Link>
                 <button className='btn' onClick={props.logout_func}>Logout</button>
             </nav>
             <br/><br/><br/><br/><br/>
