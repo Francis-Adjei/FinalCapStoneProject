@@ -16,7 +16,7 @@ function App() {
 
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={LoginContainer} exact />
+          <Route path="/login" component={LoginContainer} exact />
           <Route path="/forget-password" component={ForgetPasswordContainer} exact />
           <Route path="/sign-up" component={SignupContainer} exact />
           <Route path="/home" component={HomeContainer} exact />
