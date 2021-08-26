@@ -21,7 +21,7 @@ const Login = (props) => {
                             </div>
                         </div>
                         <div className="input-container password">
-                            <div className="icon">
+                            <div className="icons">
                                 <i className="fas fa-lock"></i>
                             </div>
                             <div className="input-box">
