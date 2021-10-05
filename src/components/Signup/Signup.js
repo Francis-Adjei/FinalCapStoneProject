@@ -7,7 +7,7 @@ const Signup = (props) => {
 
     return (
          <>
-            <img className="background" src={image} />
+            <img className="background" src={image}  alt = ""/>
             <div className="container">
                 <div className="img"></div>
                 <div className="login-content">
